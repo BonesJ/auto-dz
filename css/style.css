@@ -1,0 +1,28 @@
+.bi {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.nav-icon-text {
+  display: block;
+  font-size: 0.65em;
+}
+
+.nav-icon {
+  display: block;
+  /* height: 1em;
+  width: 1em; */
+  text-align: center;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */

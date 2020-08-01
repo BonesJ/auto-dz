@@ -1,22 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Hello, world!</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+      <a class="navbar-brand" href="#">Logo here</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Acceuil </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">A Propos</a>
+          </li>
+          <li class="nav-item dropdown mr-auto">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Langue</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Francais</a>
+              <a class="dropdown-item" href="#">Arabe</a>
+              <a class="dropdown-item" href="#">Anglais</a>
+            </div>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <form class="form-inline">
+            <button class="btn btn-outline-primary">
+              Publier Annonce
+            </button>
+          </form>
+          <li class="nav-item nav-icon">
+            <a class="nav-link" id="signin" href="#">
+              <svg class="bi" fill="currentColor">
+                <use
+                  xlink:href="assets/bootstrap-icons.svg#box-arrow-in-right"
+                ></use>
+              </svg>
+              <span class="nav-icon-text">Se connecter</span>
+            </a>
+          </li>
+          <li class="nav-item nav-icon">
+            <a class="nav-link" id="signin" href="#">
+              <svg class="bi" fill="currentColor">
+                <use xlink:href="assets/bootstrap-icons.svg#person-plus"></use>
+              </svg>
+              <span class="nav-icon-text">Creer un compte</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Fluid jumbotron</h1>
+        <p class="lead">
+          Le coin pour achter, vendre et reparer sa voiture.
+        </p>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="voiture-tab"
+              data-toggle="tab"
+              href="#voitures"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+              >Voitures</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="garage-tab"
+              data-toggle="tab"
+              href="#garage"
+              role="tab"
+              aria-controls="garage"
+              aria-selected="false"
+              >Garages</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div
+            class="tab-pane active"
+            id="voiture"
+            role="tabpanel"
+            aria-labelledby="voiture-tab"
+          >
+            <!-- Enter Car Search Fields Here -->
+            <form>
+              <div class="form-row">
+                <div class="col-7">
+                  <input type="text" class="form-control" placeholder="City" />
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="State" />
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Zip" />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div
+            class="tab-pane"
+            id="garage"
+            role="tabpanel"
+            aria-labelledby="garage-tab"
+          >
+            <!-- Enter Garage Search Fields Here -->
+            <form>
+              <div class="form-row">
+                <div class="col-7">
+                  <input type="text" class="form-control" placeholder="City" />
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="State" />
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Zip" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h1>Hello, world!</h1>
+
+    <h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur excepturi
+      porro recusandae cum quia natus quaerat consequatur sequi nam, tempore,
+      sint, iure voluptate aliquam ipsum voluptas quo saepe enim blanditiis
+      reprehenderit dignissimos libero itaque deserunt? Suscipit corporis
+      reprehenderit minima distinctio commodi beatae earum magnam debitis, ipsum
+      aliquid, voluptatem officia inventore.
+    </h1>
+
+    <h1>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur excepturi
+      porro recusandae cum quia natus quaerat consequatur sequi nam, tempore,
+      sint, iure voluptate aliquam ipsum voluptas quo saepe enim blanditiis
+      reprehenderit dignissimos libero itaque deserunt? Suscipit corporis
+      reprehenderit minima distinctio commodi beatae earum magnam debitis, ipsum
+      aliquid, voluptatem officia inventore.
+    </h1>
+
+    <svg class="bi">
+      <use xlink:href="assets/bootstrap-icons.svg#alarm"></use>
+    </svg>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="svgxuse.js"></script>
   </body>
 </html>
