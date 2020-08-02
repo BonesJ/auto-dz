@@ -9,10 +9,15 @@
     />
 
     <!-- Bootstrap CSS -->
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <script
+      src="https://kit.fontawesome.com/8652255963.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/demo.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/demo.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Hello, world!</title>
   </head>
   <body>
@@ -66,7 +71,12 @@
             </button>
           </form>
           <li class="nav-item nav-icon">
-            <a class="nav-link" id="signin" href="#">
+            <a
+              data-toggle="modal"
+              class="nav-link"
+              id="signin"
+              href="#loginModal"
+            >
               <svg class="bi" fill="currentColor">
                 <use
                   xlink:href="assets/bootstrap-icons.svg#box-arrow-in-right"
@@ -87,27 +97,107 @@
       </div>
     </nav>
 
+    <!-- Modal Login Backup -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-title text-center">
+              <h4>Login</h4>
+            </div>
+            <div class="d-flex flex-column text-center">
+              <form>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email1"
+                    placeholder="Your email address..."
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password1"
+                    placeholder="Your password..."
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block btn-round"
+                >
+                  Login
+                </button>
+              </form>
+
+              <div class="text-center text-muted delimiter">
+                or use a social network
+              </div>
+              <div class="d-flex justify-content-center social-buttons">
+                <button type="button" class="btn btn-fb">
+                  <i class="fab fa-facebook-f pr-1"></i> Facebook
+                </button>
+                <!--Twitter-->
+                <button type="button" class="btn btn-tw">
+                  <i class="fab fa-twitter pr-1"></i> Twitter
+                </button>
+                <!--Google +-->
+                <button type="button" class="btn btn-gplus">
+                  <i class="fab fa-google pr-1"></i> Google
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <div class="signup-section">
+              Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jumbotron Hero Area -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-3">Fluid jumbotron</h1>
+        <h1 class="display-3">Trouvez votre prochain vehicule</h1>
         <p class="lead">
           Le coin pour achter, vendre et reparer sa voiture.
         </p>
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
+
+        <ul class="nav nav-tabs mb-4 row" id="myTab" role="tablist">
+          <li class="nav-item">
             <a
               class="nav-link active"
-              id="voiture-tab"
+              id="car-tab"
               data-toggle="tab"
-              href="#voitures"
+              href="#car"
               role="tab"
-              aria-controls="home"
+              aria-controls="car"
               aria-selected="true"
               >Voitures</a
             >
           </li>
-          <li class="nav-item" role="presentation">
+          <li class="nav-item mr-auto">
             <a
               class="nav-link"
               id="garage-tab"
@@ -119,48 +209,113 @@
               >Garages</a
             >
           </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="advsearch-tab"
+              data-toggle="tab"
+              href="#advsearch"
+              role="tab"
+              aria-controls="advsearch"
+              aria-selected="false"
+              >Recherche Avancee</a
+            >
+          </li>
         </ul>
 
         <!-- Tab panes -->
+        <!-- Car Tab -->
         <div class="tab-content">
           <div
             class="tab-pane active"
-            id="voiture"
+            id="car"
             role="tabpanel"
-            aria-labelledby="voiture-tab"
+            aria-labelledby="car-tab"
           >
-            <!-- Enter Car Search Fields Here -->
-            <form>
+            <form class="container">
               <div class="form-row">
-                <div class="col-7">
+                <div class="col-md">
+                  <select class="custom-select">
+                    <option selected>Marque Vehicules</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-md">
                   <input type="text" class="form-control" placeholder="City" />
                 </div>
-                <div class="col">
+                <div class="col-md">
                   <input type="text" class="form-control" placeholder="State" />
                 </div>
-                <div class="col">
+                <div class="col-md">
                   <input type="text" class="form-control" placeholder="Zip" />
                 </div>
               </div>
             </form>
           </div>
-
+          <!-- Garage Tab -->
           <div
             class="tab-pane"
             id="garage"
             role="tabpanel"
             aria-labelledby="garage-tab"
           >
-            <!-- Enter Garage Search Fields Here -->
             <form>
               <div class="form-row">
-                <div class="col-7">
-                  <input type="text" class="form-control" placeholder="City" />
+                <div class="col-md">
+                  <select class="custom-select">
+                    <option selected>Type de Garage</option>
+                    <option value="1"
+                      >Mecanicien<span class="badge badge-primary badge-tab">
+                        14</span
+                      ></option
+                    >
+                    <option value="2">Electricien</option>
+                    <option value="3">Tolier</option>
+                  </select>
                 </div>
-                <div class="col">
+                <div class="col-md">
+                  <input type="text" class="form-control" placeholder="Ville" />
+                </div>
+                <div class="col-md">
                   <input type="text" class="form-control" placeholder="State" />
                 </div>
-                <div class="col">
+                <div class="col-md">
+                  <input type="text" class="form-control" placeholder="Zip" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Adv Search -->
+          <div
+            class="tab-pane"
+            id="advsearch"
+            role="tabpanel"
+            aria-labelledby="advsearch-tab"
+          >
+            <form>
+              <div class="form-row">
+                <div class="col-md">
+                  <select class="custom-select">
+                    <option selected>Recherche</option>
+                    <option value="1"
+                      >Mecanicien<span class="badge badge-primary badge-tab">
+                        14</span
+                      ></option
+                    >
+                    <option value="2">Electricien</option>
+                    <option value="3">Tolier</option>
+                  </select>
+                </div>
+                <div class="col-md">
+                  <input type="text" class="form-control" placeholder="Ville" />
+                </div>
+                <div class="col-md">
+                  <input type="text" class="form-control" placeholder="State" />
+                </div>
+                <div class="col-md">
                   <input type="text" class="form-control" placeholder="Zip" />
                 </div>
               </div>
@@ -170,7 +325,156 @@
       </div>
     </div>
 
-    <h1>Hello, world!</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <!-- Ads Caroussel -->
+        <div class="container text-center my-3">
+          <h2 class="font-weight-light">Annonces Primes</h2>
+
+          <div class="row mx-auto my-auto">
+            <div
+              id="recipeCarousel"
+              class="carousel slide w-100"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner w-100" role="listbox">
+                <!-- First Carousel Card -->
+                <div class="carousel-item active">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <div class="item-card7-overlaytext">
+                        <h4 class="mb-0">DA 252M</h4>
+                      </div>
+                      <img
+                        class="card-img-top img-fluid"
+                        src="http://placehold.it/800x600/f44242/fff"
+                        alt="Card image cap"
+                      />
+
+                      <div class="card card-body">
+                        <h4 class="card-title" id="carousel-card1-title">
+                          Card 1
+                        </h4>
+                        <ul>
+                          <!-- first card detail -->
+                          <li class="card-details">
+                            <a href="#">
+                              <span class="text-muted"
+                                ><i class="fa fa-eye" aria-hidden="true"></i> 22
+                                Views</span
+                              >
+                            </a>
+                          </li>
+                          <!-- second card detail -->
+                          <li>
+                            <a href="#" class="icons"
+                              ><i
+                                class="icon icon-location-pin text-muted mr-1"
+                              ></i>
+                              USA</a
+                            >
+                          </li>
+                        </ul>
+                        <p class="card-text text-justify">
+                          This is a longer carda with supporting text below as a
+                          natural lead-in to additional content. This content is
+                          a little bit longer.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-muted"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Carousel Card -->
+                <div class="carousel-item">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img
+                        class="card-img-top img-fluid"
+                        src="http://placehold.it/800x600/418cf4/fff"
+                        alt="Card image cap"
+                      />
+                      <div class="card card-body">
+                        <h4 class="card-title">Card 2</h4>
+                        <p class="card-text text-justify">
+                          This is a longer carda with supporting text below as a
+                          natural lead-in to additional content. This content is
+                          a little bit longer.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-muted"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Third Carousel Card -->
+                <div class="carousel-item">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img
+                        class="card-img-top img-fluid"
+                        src="http://placehold.it/800x600/805cd8/fff"
+                        alt="Card image cap"
+                      />
+                      <div class="card card-body">
+                        <h4 class="card-title">Card 3</h4>
+                        <p class="card-text text-justify">
+                          This is a longer carda with supporting text below as a
+                          natural lead-in to additional content. This content is
+                          a little bit longer.
+                        </p>
+                        <p class="card-text">
+                          <small class="text-muted"
+                            >Last updated 3 mins ago</small
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev w-auto"
+                href="#recipeCarousel"
+                role="button"
+                data-slide="prev"
+                id="carousel-prev-link"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+              <a
+                class="carousel-control-next w-auto"
+                href="#recipeCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <h5 class="mt-2">Advances one slide at a time</h5>
+        </div>
+        <!-- end of Ads Caroussel -->
+      </div>
+    </div>
+
+    <h1>Hello, world !</h1>
 
     <h1>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur excepturi
@@ -195,6 +499,12 @@
     </svg>
 
     <!-- Optional JavaScript -->
+
+    <!-- <script>
+      $(function () {
+        $("#myTab li:last-child a").tab("show");
+      });
+    </script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -211,6 +521,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script defer src="svgxuse.js"></script>
+    <script src="/js/myscripts.js"></script>
+    <!-- <script defer src="svgxuse.js"></script> -->
   </body>
 </html>
