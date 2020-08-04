@@ -14,90 +14,266 @@
       src="https://kit.fontawesome.com/8652255963.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/css/bootstrap.css" />
-    <link rel="stylesheet" href="/css/demo.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- <link rel="stylesheet" href="css/demo.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="#">Logo here</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+    <div class="container-fluid top-half">
+      <nav
+        class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
+        id="main-nav"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand mr-0" href="#"
+          ><img
+            src="assets/logo/logo-dark.svg"
+            height="60"
+            class="d-inline-block align-top"
+            alt=""
+            loading="lazy"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Acceuil </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">A Propos</a>
-          </li>
-          <li class="nav-item dropdown mr-auto">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Langue</a
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Acceuil </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">A Propos</a>
+            </li>
+            <li class="nav-item dropdown mr-auto">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown01"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Langue</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Francais</a>
+                <a class="dropdown-item" href="#">Arabe</a>
+                <a class="dropdown-item" href="#">Anglais</a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <form class="form-inline">
+              <button class="btn btn-outline-secondary">
+                Publier Annonce
+              </button>
+            </form>
+            <!-- Sign in link -->
+            <li class="nav-item nav-icon mr-auto">
+              <a
+                data-toggle="modal"
+                class="nav-link"
+                id="signin"
+                href="#loginModal"
+              >
+                <svg class="bi" fill="currentColor">
+                  <use
+                    xlink:href="/assets/bootstrap-icons.svg#box-arrow-in-right"
+                  ></use>
+                </svg>
+                <span class="nav-icon-text">Se connecter</span>
+              </a>
+            </li>
+            <!-- Sign Out link -->
+            <li class="nav-item nav-icon mr-auto">
+              <a
+                data-toggle="modal"
+                class="nav-link"
+                id="signin"
+                href="#loginModal"
+              >
+                <svg class="bi" fill="currentColor">
+                  <use
+                    xlink:href="assets/bootstrap-icons.svg#box-arrow-left"
+                  ></use>
+                </svg>
+                <span class="nav-icon-text">Se deconnecter</span>
+              </a>
+            </li>
+            <!-- create account link -->
+            <li class="nav-item nav-icon mr-auto">
+              <a class="nav-link" id="signin" href="#">
+                <svg class="bi nav-icon" fill="currentColor">
+                  <use
+                    xlink:href="assets/bootstrap-icons.svg#person-plus"
+                  ></use>
+                </svg>
+                <span class="nav-icon-text">Creer un compte</span>
+              </a>
+            </li>
+            <!-- favourites link -->
+            <li class="nav-item nav-icon mr-auto">
+              <a class="nav-link" id="signin" href="#">
+                <svg class="bi nav-icon" fill="currentColor">
+                  <use xlink:href="assets/bootstrap-icons.svg#heart"></use>
+                </svg>
+                <span class="nav-icon-text">Mes Favoris</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Jumbotron Hero Area -->
+      <div class="jumbotron jumbotron-fluid hero-area">
+        <div class="container">
+          <h1 class="display-2 text-center" id="hero-text">
+            Trouvez votre prochain
+          </h1>
+          <!-- <p class="lead">
+              Le coin pour achter, vendre et reparer sa voiture.
+            </p> -->
+
+          <!-- Nav tabs -->
+          <ul
+            class="nav nav-pills mb-4 justify-content-center"
+            id="myTab"
+            role="tablist"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="car-tab"
+                data-toggle="tab"
+                href="#car"
+                role="tab"
+                aria-controls="car"
+                aria-selected="true"
+                >Voitures</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="garage-tab"
+                data-toggle="tab"
+                href="#garage"
+                role="tab"
+                aria-controls="garage"
+                aria-selected="false"
+                >Garages</a
+              >
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div>
+            <!-- Car Tab -->
+            <div
+              class="tab-pane"
+              id="car"
+              role="tabpanel"
+              aria-labelledby="car-tab"
             >
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Francais</a>
-              <a class="dropdown-item" href="#">Arabe</a>
-              <a class="dropdown-item" href="#">Anglais</a>
+              <form>
+                <div class="form-row">
+                  <div class="col-md">
+                    <select class="custom-select">
+                      <option selected>Marque Vehicules</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div class="col-md">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="City"
+                    />
+                  </div>
+                  <div class="col-md">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="State"
+                    />
+                  </div>
+                  <div class="col-md">
+                    <input type="text" class="form-control" placeholder="Zip" />
+                  </div>
+                </div>
+                <a
+                  class="nav-link"
+                  id="advsearch-tab"
+                  data-toggle="tab"
+                  href="#advsearch"
+                  role="tab"
+                  aria-controls="advsearch"
+                  aria-selected="false"
+                  >Recherche Avancee</a
+                >
+              </form>
             </div>
-          </li>
-        </ul>
-
-        <ul class="navbar-nav ml-auto">
-          <form class="form-inline">
-            <button class="btn btn-outline-primary">
-              Publier Annonce
-            </button>
-          </form>
-          <li class="nav-item nav-icon">
-            <a
-              data-toggle="modal"
-              class="nav-link"
-              id="signin"
-              href="#loginModal"
+            <!-- Garage Tab -->
+            <div
+              class="tab-pane"
+              id="garage"
+              role="tabpanel"
+              aria-labelledby="garage-tab"
             >
-              <svg class="bi" fill="currentColor">
-                <use
-                  xlink:href="assets/bootstrap-icons.svg#box-arrow-in-right"
-                ></use>
-              </svg>
-              <span class="nav-icon-text">Se connecter</span>
-            </a>
-          </li>
-          <li class="nav-item nav-icon">
-            <a class="nav-link" id="signin" href="#">
-              <svg class="bi" fill="currentColor">
-                <use xlink:href="assets/bootstrap-icons.svg#person-plus"></use>
-              </svg>
-              <span class="nav-icon-text">Creer un compte</span>
-            </a>
-          </li>
-        </ul>
+              <form>
+                <div class="form-row">
+                  <div class="col-md">
+                    <select class="custom-select">
+                      <option selected>Type de Garage</option>
+                      <option value="1"
+                        >Mecanicien<span class="badge badge-primary badge-tab">
+                          14</span
+                        ></option
+                      >
+                      <option value="2">Electricien</option>
+                      <option value="3">Tolier</option>
+                    </select>
+                  </div>
+                  <div class="col-md">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ville"
+                    />
+                  </div>
+                  <div class="col-md">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="State"
+                    />
+                  </div>
+                  <div class="col-md">
+                    <input type="text" class="form-control" placeholder="Zip" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-
-    <!-- Modal Login Backup -->
+    </div>
+    <!-- Modal Login -->
     <div
       class="modal fade"
       id="loginModal"
@@ -120,11 +296,18 @@
           </div>
           <div class="modal-body">
             <div class="form-title text-center">
-              <h4>Login</h4>
+              <h5>Entrez vos informations pour proceeder</h5>
             </div>
             <div class="d-flex flex-column text-center">
               <form>
-                <div class="form-group">
+                <label for="password" class="password mt-4"
+                  ><h6>E-mail</h6></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fa fa-at" aria-hidden="true"></i
+                  ></span>
+
                   <input
                     type="email"
                     class="form-control"
@@ -132,7 +315,13 @@
                     placeholder="Your email address..."
                   />
                 </div>
-                <div class="form-group">
+                <label for="password" class="password mt-4"
+                  ><h6>Mot de Passe</h6></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock" aria-hidden="true"></i
+                  ></span>
                   <input
                     type="password"
                     class="form-control"
@@ -142,14 +331,14 @@
                 </div>
                 <button
                   type="button"
-                  class="btn btn-secondary btn-block btn-round"
+                  class="btn btn-outline-secondary btn-block login-btn mt-4"
                 >
-                  Login
+                  Se Connecter
                 </button>
               </form>
 
               <div class="text-center text-muted delimiter">
-                or use a social network
+                ou se connecter a travers un des resaux ci-dessous
               </div>
               <div class="d-flex justify-content-center social-buttons">
                 <button type="button" class="btn btn-fb">
@@ -168,167 +357,127 @@
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <div class="signup-section">
-              Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.
+              Vous n'etes pas encore membre ?
+              <a
+                href="#a"
+                class="text-info"
+                data-dismiss="modal"
+                data-toggle="modal"
+                data-target="#registerModal"
+              >
+                Creer un Compte</a
+              >.
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Jumbotron Hero Area -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-3">Trouvez votre prochain vehicule</h1>
-        <p class="lead">
-          Le coin pour achter, vendre et reparer sa voiture.
-        </p>
-        <!-- Nav tabs -->
-
-        <ul class="nav nav-tabs mb-4 row" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a
-              class="nav-link active"
-              id="car-tab"
-              data-toggle="tab"
-              href="#car"
-              role="tab"
-              aria-controls="car"
-              aria-selected="true"
-              >Voitures</a
+    <!-- Modal Register -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
             >
-          </li>
-          <li class="nav-item mr-auto">
-            <a
-              class="nav-link"
-              id="garage-tab"
-              data-toggle="tab"
-              href="#garage"
-              role="tab"
-              aria-controls="garage"
-              aria-selected="false"
-              >Garages</a
-            >
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              id="advsearch-tab"
-              data-toggle="tab"
-              href="#advsearch"
-              role="tab"
-              aria-controls="advsearch"
-              aria-selected="false"
-              >Recherche Avancee</a
-            >
-          </li>
-        </ul>
-
-        <!-- Tab panes -->
-        <!-- Car Tab -->
-        <div class="tab-content">
-          <div
-            class="tab-pane active"
-            id="car"
-            role="tabpanel"
-            aria-labelledby="car-tab"
-          >
-            <form class="container">
-              <div class="form-row">
-                <div class="col-md">
-                  <select class="custom-select">
-                    <option selected>Marque Vehicules</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="City" />
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="State" />
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="Zip" />
-                </div>
-              </div>
-            </form>
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-          <!-- Garage Tab -->
-          <div
-            class="tab-pane"
-            id="garage"
-            role="tabpanel"
-            aria-labelledby="garage-tab"
-          >
-            <form>
-              <div class="form-row">
-                <div class="col-md">
-                  <select class="custom-select">
-                    <option selected>Type de Garage</option>
-                    <option value="1"
-                      >Mecanicien<span class="badge badge-primary badge-tab">
-                        14</span
-                      ></option
-                    >
-                    <option value="2">Electricien</option>
-                    <option value="3">Tolier</option>
-                  </select>
+          <div class="modal-body">
+            <div class="form-title text-center">
+              <h5>Vous serez bientot nembre !</h5>
+            </div>
+            <div class="d-flex flex-column text-center">
+              <form>
+                <label for="password" class="password mt-4"
+                  ><h6>E-mail</h6></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fa fa-at" aria-hidden="true"></i
+                  ></span>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email1"
+                    placeholder="Your email address..."
+                  />
                 </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="Ville" />
+                <label for="password" class="password mt-4"
+                  ><h6>Mot de Passe</h6></label
+                >
+                <div class="input-group">
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock" aria-hidden="true"></i
+                  ></span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password1"
+                    placeholder="Your password..."
+                  />
                 </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="State" />
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="Zip" />
-                </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary btn-block login-btn mt-4"
+                >
+                  Se Connecter
+                </button>
+              </form>
+
+              <div class="text-center text-muted delimiter">
+                ou se connecter a travers un des resaux ci-dessous
               </div>
-            </form>
+              <div class="d-flex justify-content-center social-buttons">
+                <button type="button" class="btn btn-fb">
+                  <i class="fab fa-facebook-f pr-1"></i> Facebook
+                </button>
+                <!--Twitter-->
+                <button type="button" class="btn btn-tw">
+                  <i class="fab fa-twitter pr-1"></i> Twitter
+                </button>
+                <!--Google +-->
+                <button type="button" class="btn btn-gplus">
+                  <i class="fab fa-google pr-1"></i> Google
+                </button>
+              </div>
+            </div>
           </div>
-          <!-- Adv Search -->
-          <div
-            class="tab-pane"
-            id="advsearch"
-            role="tabpanel"
-            aria-labelledby="advsearch-tab"
-          >
-            <form>
-              <div class="form-row">
-                <div class="col-md">
-                  <select class="custom-select">
-                    <option selected>Recherche</option>
-                    <option value="1"
-                      >Mecanicien<span class="badge badge-primary badge-tab">
-                        14</span
-                      ></option
-                    >
-                    <option value="2">Electricien</option>
-                    <option value="3">Tolier</option>
-                  </select>
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="Ville" />
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="State" />
-                </div>
-                <div class="col-md">
-                  <input type="text" class="form-control" placeholder="Zip" />
-                </div>
-              </div>
-            </form>
+          <div class="modal-footer d-flex justify-content-center">
+            <div class="signup-section">
+              Vous n'etes pas encore membre ?
+              <a
+                href="#a"
+                class="text-info"
+                data-dismiss="modal"
+                data-toggle="modal"
+                data-target="#registerModal"
+              >
+                Creer un Compte</a
+              >.
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Jumbotronb for prime listings -->
     <div class="jumbotron jumbotron-fluid">
-      <div class="container">
+      <div class="container ad-carousel">
         <!-- Ads Caroussel -->
-        <div class="container text-center my-3">
+        <div class="container text-center my-3 ad-carousel">
           <h2 class="font-weight-light">Annonces Primes</h2>
 
           <div class="row mx-auto my-auto">
@@ -343,7 +492,7 @@
                   <div class="col-md-4">
                     <div class="card">
                       <div class="item-card7-overlaytext">
-                        <h4 class="mb-0">DA 252M</h4>
+                        <h4 class="mb-0 price-tag" id="price-tag1">DA 252M</h4>
                       </div>
                       <img
                         class="card-img-top img-fluid"
@@ -355,36 +504,108 @@
                         <h4 class="card-title" id="carousel-card1-title">
                           Card 1
                         </h4>
-                        <ul>
-                          <!-- first card detail -->
-                          <li class="card-details">
-                            <a href="#">
-                              <span class="text-muted"
-                                ><i class="fa fa-eye" aria-hidden="true"></i> 22
-                                Views</span
-                              >
-                            </a>
-                          </li>
-                          <!-- second card detail -->
-                          <li>
-                            <a href="#" class="icons"
-                              ><i
-                                class="icon icon-location-pin text-muted mr-1"
-                              ></i>
-                              USA</a
+                        <ul class="card-list container">
+                          <div class="row">
+                            <!-- first card detail -->
+                            <li
+                              class="card-details card-i-group col-6 text-left"
                             >
-                          </li>
+                              <a href="#">
+                                <span class="text-muted"
+                                  ><i class="fa fa-eye" aria-hidden="true"></i>
+                                  22 Vues</span
+                                >
+                              </a>
+                            </li>
+                            <!-- second card detail -->
+                            <li
+                              class="card-details card-i-group col-6 text-left"
+                            >
+                              <a href="#">
+                                <span class="text-muted"
+                                  ><i
+                                    class="fa fa-map-marker"
+                                    aria-hidden="true"
+                                  ></i>
+                                  Alger
+                                </span>
+                              </a>
+                            </li>
+                          </div>
+                          <!-- third card detail -->
+                          <div class="row">
+                            <li
+                              class="card-details card-i-group col-6 text-left"
+                            >
+                              <a href="#">
+                                <span class="text-muted"
+                                  ><i
+                                    class="fa fa-thumb-tack"
+                                    aria-hidden="true"
+                                  ></i>
+                                  5 minutes
+                                </span>
+                              </a>
+                            </li>
+                            <!-- fouth card detail -->
+                            <li class="card-details card-i-group col text-left">
+                              <a href="tel:07702419312">
+                                <span class="text-muted"
+                                  ><i
+                                    class="fa fa-phone"
+                                    aria-hidden="true"
+                                  ></i>
+                                  0770 24 19 312
+                                </span>
+                              </a>
+                            </li>
+                          </div>
                         </ul>
-                        <p class="card-text text-justify">
+                        <p class="card-text text-left">
                           This is a longer carda with supporting text below as a
                           natural lead-in to additional content. This content is
                           a little bit longer.
                         </p>
-                        <p class="card-text">
-                          <small class="text-muted"
-                            >Last updated 3 mins ago</small
-                          >
-                        </p>
+                        <div
+                          class="mt-2 footerimg-r ml-auto add-fav-ad form-inline"
+                        >
+                          <a
+                            href="#"
+                            class="text-muted"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Add Wishlist"
+                            ><i class="fa fa-heart"></i
+                          ></a>
+                          <p class="card-text">
+                            <small class="text-muted"
+                              >Last updated 3 mins ago</small
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <div class="card card-footer">
+                        <div class="footerimg d-flex mt-0 mb-0">
+                          <div class="d-flex footerimg-l mb-0">
+                            <img
+                              src="../../assets//images/faces/male/17.jpg"
+                              alt="image"
+                              class="avatar brround mr-2"
+                            />
+                            <h6
+                              class="time-title text-muted p-0 leading-normal mt-2 mb-0"
+                            >
+                              Christopher<i
+                                class="icon icon-check text-success fs-12 ml-1"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title=""
+                                data-original-title="verified"
+                              ></i>
+                            </h6>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -474,6 +695,7 @@
       </div>
     </div>
 
+    <!-- dunno what to do here -->
     <h1>Hello, world !</h1>
 
     <h1>
@@ -506,6 +728,7 @@
       });
     </script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -521,7 +744,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="/js/myscripts.js"></script>
+    <script src="js/myscripts.js"></script>
     <!-- <script defer src="svgxuse.js"></script> -->
   </body>
 </html>

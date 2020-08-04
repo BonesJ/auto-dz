@@ -1,10 +1,43 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #14213d;
+  --secondary: #fb8b24;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  /* --breakpoint-lg: 992px; */
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
 .bi {
   display: inline-block;
   width: 2em;
   height: 2em;
   stroke-width: 0;
   stroke: currentColor;
-  /* fill: currentColor; */
 }
 
 .nav-icon-text {
@@ -12,24 +45,31 @@
   font-size: 0.65em;
 }
 
-.nav-icon {
-  display: block;
+li.nav-icon {
+  display: inline-block;
   /* height: 1em;
   width: 1em; */
   text-align: center;
 }
 
-.btn-fb {
-  color: #3b5998;
-  margin: 5px;
+.text-muted {
+  color: var(--gray) !important;
 }
-.btn-gplus {
-  color: #c20806;
-  margin: 5px;
+
+/* transparency for navbar */
+#main-nav {
+  background-color: rgba(20, 33, 61, 0) !important ;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
-.btn-tw {
-  color: #00b6f1;
-  margin: 5px;
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+/* navigation icons color change */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--secondary);
 }
 
 /* Add an extra .carousel parent class to increase specifity
@@ -52,7 +92,7 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
 
-/* TEST AREA */
+/* ~Carousel style */
 @media (max-width: 768px) {
   .carousel-inner .carousel-item > div {
     display: none;
@@ -101,3 +141,161 @@
   padding: 0;
   margin: 0;
 }
+
+/* Equal-height card images, cf. https://stackoverflow.com/a/47698201/1375163*/
+.card {
+  /*height: 11vw;*/
+  object-fit: cover;
+  border-radius: 0;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* .card {
+  } */
+  li span.text-muted {
+    font-size: 1.2em !important;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container.ad-carousel {
+    min-width: 90vw !important;
+  }
+  li span.text-muted {
+    font-size: 0.9em !important;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  li span.text-muted {
+    font-size: 1em !important;
+    color: red !important;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) {
+}
+
+/* Test Area */
+/* @media (min-width: 768px) {
+  li span.text-muted {
+    font-size: 1.2em !important;
+
+    color: red !important;
+  }
+} */
+/* Test Area */
+/* ul.card-list {
+  columns: 2;
+  margin: 0;
+  padding: 0;
+} */
+
+/* modal login style */
+span.input-group-text {
+  border-radius: 5px 0px 0px 5px !important;
+  margin-bottom: 3vh;
+  width: 42px;
+  height: 38px;
+  /* background-color: var(--gray); */
+  color: var(--primary);
+  fill: red;
+}
+/* span.input-group {
+  border-radius: 0px;
+  background-color: red;
+  fill: red;
+} */
+.form-control {
+  padding-bottom: 15px;
+}
+
+.login-btn {
+  /* color: orange !important; */
+  margin-bottom: 3vh;
+}
+
+.btn-fb {
+  color: #3b5998;
+  margin: 5px;
+}
+.btn-gplus {
+  color: #c20806;
+  margin: 5px;
+}
+.btn-tw {
+  color: #00b6f1;
+  margin: 5px;
+}
+
+.btn-fb:hover {
+  outline: auto;
+  outline-color: #3b5998;
+}
+
+.btn-gplus:hover {
+  outline: auto;
+  color: #c20806;
+}
+.btn-tw:hover {
+  outline: auto;
+  color: #00b6f1;
+}
+
+div.top-half {
+  color: white;
+  min-height: 52vh !important;
+  border-radius: 0 0 10vh 10vh;
+  font-weight: 300;
+  background-image: url("../assets/img/road-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0;
+}
+
+.jumbotron.hero-area {
+  color: white;
+  background-color: rgba(70, 70, 70, 0);
+  font-weight: 600;
+
+  /* min-height: 52vh !important;
+  border-radius: 0 0 10vh 10vh;
+  font-weight: 300;
+  background-image: url("../assets/img/road-1.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 100px;
+   */
+}
+#hero-text {
+  font-size: 4.5vw !important;
+  /* display: inline-block; */
+}
+
+.nav > li > a:focus {
+  color: red !important;
+  /* clip-path: circle(100%) !important; */
+}
+/* #car {
+  background-color: rgba(224, 11, 11, 1) !important;
+  width: 100%;
+  clip-path: circle(10%);
+  transition: clip-path 1s;
+
+  /* padding-top: 10px; */
+
+/* #car:hover {
+  clip-path: circle(100%) !important;
+}
+ a#garage-tab.nav-link:hover {
+  clip-path: circle(100%) !important;
+} */
+/* .jumbotron.hero-area {
+  color: white;
+  min-height: 52vh !important;
+  border-radius: 0 0 10vh 10vh;
+  font-weight: 300;
+  background-image: url("../assets/img/road-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 100px;
+  
+}  */

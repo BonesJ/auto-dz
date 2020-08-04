@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="750" viewBox="0 0 750 750">
+  <g id="Light" transform="translate(-3702 -189)">
+    <g id="Background" transform="translate(3702 189)" fill="#fb8b24" stroke="#707070" stroke-width="1">
+      <rect width="750" height="750" stroke="none"/>
+      <rect x="0.5" y="0.5" width="749" height="749" fill="none"/>
+    </g>
+    <g id="Elements" transform="translate(3147.001 26.6)">
+      <g id="Text" transform="translate(657.999 468.4)">
+        <text id="A" transform="translate(0 194)" fill="#14213d" font-size="170" font-family="Pacifico-Regular, Pacifico"><tspan x="0" y="0">A</tspan></text>
+        <text id="D" transform="translate(311 194)" fill="#14213d" font-size="170" font-family="Pacifico-Regular, Pacifico"><tspan x="0" y="0">D</tspan></text>
+        <text id="auto" transform="translate(118 203)" fill="#fff" font-size="171" font-family="Pacifico-Regular, Pacifico"><tspan x="0" y="0">uto.</tspan></text>
+        <text id="z" transform="translate(415 193)" fill="#fff" font-size="171" font-family="Pacifico-Regular, Pacifico"><tspan x="0" y="0">z</tspan></text>
+      </g>
+      <g id="Car_Bodywork" data-name="Car Bodywork" transform="translate(596.877 372.4)">
+        <path id="Path_1" data-name="Path 1" d="M2199.523,754.408c26.391-2.111,152.469-85.915,222-85s185.993,71.714,209,82,9.955-3.023,4-6-125.963-97.188-205-98-155.431,59.264-213,86S2173.133,756.52,2199.523,754.408Z" transform="translate(-2113.902 -647.4)" fill="#14213d" stroke="#707070" stroke-linecap="round" stroke-width="1"/>
+        <path id="Path_2" data-name="Path 2" d="M2356.539,823.1c32.478,1.83,27.989,21.085,1,22s-187.852-1.713-240-4-121.711-10.34,5-14S2356.539,823.1,2356.539,823.1Z" transform="translate(-2050.918 -695.091)" fill="#14213d" stroke="#707070" stroke-width="1"/>
+        <path id="Path_5" data-name="Path 5" d="M358.3,127.72c30.781-3.679,46.2,0,116,0s75.3-53,157-53-2.6,2.393-42,19-56.921,49.6-109,51-59.312,0-96,0S327.523,131.4,358.3,127.72Z" transform="translate(2.401 0.288)" fill="#14213d" stroke="#707070" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
