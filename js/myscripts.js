@@ -1,5 +1,38 @@
 // const { STATUS_CODES } = require("http");
 
+// //  Change hero area img
+// $(document).ready(function () {
+//   var urls = [
+//     "../assets/img/road-1.jpg",
+//     "../assets/img/road-2.jpg",
+//     "../assets/img/road-3.jpg",
+//     "../assets/img/road-4.jpg",
+//   ];
+
+//   varcout = 1;
+
+//   $("div.top-half").css("background-image", 'url("' + urls[0] + '")');
+//   setInterval(function () {
+//     $("div.top-half").css("background-image", 'url("' + urls[cout] + '")');
+//     cout == urls.length - 1 ? (cout = 0) : cout++;
+//   }, 5000);
+// });
+
+$(document).on("click", ".nav-link.active", function () {
+  var href = $(this).attr("href").substring(1);
+  //alert(href);
+  $(this).removeClass("active");
+  $('.tab-pane[id="' + href + '"]').removeClass("active");
+});
+$(document).mouseup(function (e) {
+  var container = $(".tab-content"); // target ID or class
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    // get Event here
+    $(".active").removeClass("active");
+  }
+});
+
 $("#recipeCarousel").carousel({
   interval: 100000,
 });
@@ -21,24 +54,6 @@ $(".carousel .carousel-item").each(function () {
     next.children(":first-child").clone().appendTo($(this));
   }
 });
-
-// //  Change hero area img
-// $(document).ready(function () {
-//   var urls = [
-//     "../assets/img/road-1.jpg",
-//     "../assets/img/road-2.jpg",
-//     "../assets/img/road-3.jpg",
-//     "../assets/img/road-4.jpg",
-//   ];
-
-//   var cout = 1;
-
-//   $(".hero-area").css("background-image", 'url("' + urls[0] + '")');
-//   setInterval(function () {
-//     $(".hero-area").css("background-image", 'url("' + urls[cout] + '")');
-//     cout == urls.length - 1 ? (cout = 0) : cout++;
-//   }, 1000);
-// });
 
 // Good Code
 

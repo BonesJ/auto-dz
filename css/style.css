@@ -32,10 +32,14 @@
     "Liberation Mono", "Courier New", monospace;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .bi {
   display: inline-block;
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   stroke-width: 0;
   stroke: currentColor;
 }
@@ -191,28 +195,102 @@ li.nav-icon {
   padding: 0;
 } */
 
+.border-bottom-0 {
+  padding-bottom: 0;
+}
+
 /* modal login style */
 span.input-group-text {
-  border-radius: 5px 0px 0px 5px !important;
-  margin-bottom: 3vh;
-  width: 42px;
-  height: 38px;
-  /* background-color: var(--gray); */
-  color: var(--primary);
-  fill: red;
+  z-index: 10000;
+  justify-content: center;
+  position: relative;
+  right: 35px;
+  border-radius: 20px !important;
+  margin: auto;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  color: rgba(230, 118, 5, 0.8);
 }
 /* span.input-group {
   border-radius: 0px;
   background-color: red;
   fill: red;
 } */
-.form-control {
-  padding-bottom: 15px;
+
+input.form-control {
+  box-shadow: 4px 7px 26px -12px rgba(128, 128, 128, 1);
+  background-color: white;
+  padding: 8px 23px;
+  /* vertical-align: bottom; */
+  height: 40px;
+  border-radius: 20px !important;
+  width: 90% !important;
+  margin: 0px !important;
+}
+
+input.form-control:hover,
+input.form-control:focus {
+  border-color: rgba(59, 89, 152, 0.5) !important;
+  background-color: white;
+  color: #495057;
+  outline: 1px;
+  box-shadow: 0 0 15px 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-label-box {
+  position: relative;
+  z-index: 50;
+  top: 10px;
+  left: 15px;
+  background-color: white;
+  text-align: center;
+  margin: 0px 5px !important;
+  border-radius: 5px !important;
+}
+#or-seperator {
+  /* position: absolute; */
+  /* z-index: 100; */
+  display: block;
+  padding-right: 8vh;
+  text-align: center;
+  width: auto;
+  background-color: transparent;
+}
+
+#email-signup,
+#password-signup-confirm {
+  margin-bottom: 5vh;
+}
+
+h6.form-label {
+  margin: 0px !important;
+  margin-bottom: 0rem;
+
+  font-size: x-small !important;
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  /* -webkit-text-fill-color: yellow !important;
+   -webkit-border-before: 5px solid yellow; */
+  border: 1px dashed rgba(59, 89, 152, 0.5) !important;
 }
 
 .login-btn {
   /* color: orange !important; */
-  margin-bottom: 3vh;
+
+  margin: 3vh 0 3vh 0;
+  border-radius: 20px;
+  box-shadow: 4px 7px 26px -12px rgba(128, 128, 128, 1);
+  width: 91%;
 }
 
 .btn-fb {
@@ -231,6 +309,7 @@ span.input-group-text {
 .btn-fb:hover {
   outline: auto;
   outline-color: #3b5998;
+  color: #3b5998;
 }
 
 .btn-gplus:hover {
@@ -242,60 +321,125 @@ span.input-group-text {
   color: #00b6f1;
 }
 
-div.top-half {
-  color: white;
-  min-height: 52vh !important;
-  border-radius: 0 0 10vh 10vh;
-  font-weight: 300;
-  background-image: url("../assets/img/road-1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding: 0;
-}
-
-.jumbotron.hero-area {
-  color: white;
-  background-color: rgba(70, 70, 70, 0);
-  font-weight: 600;
-
-  /* min-height: 52vh !important;
-  border-radius: 0 0 10vh 10vh;
-  font-weight: 300;
-  background-image: url("../assets/img/road-1.jpg"); 
-  background-repeat: no-repeat;
-  background-size: 100% 100%; 100px;
-   */
-}
-#hero-text {
-  font-size: 4.5vw !important;
-  /* display: inline-block; */
-}
-
-.nav > li > a:focus {
-  color: red !important;
-  /* clip-path: circle(100%) !important; */
-}
-/* #car {
-  background-color: rgba(224, 11, 11, 1) !important;
-  width: 100%;
-  clip-path: circle(10%);
-  transition: clip-path 1s;
-
-  /* padding-top: 10px; */
-
-/* #car:hover {
-  clip-path: circle(100%) !important;
-}
- a#garage-tab.nav-link:hover {
-  clip-path: circle(100%) !important;
-} */
 /* .jumbotron.hero-area {
   color: white;
   min-height: 52vh !important;
   border-radius: 0 0 10vh 10vh;
   font-weight: 300;
-  background-image: url("../assets/img/road-1.jpg");
+  
   background-repeat: no-repeat;
   background-size: 100% 100%; 100px;
   
 }  */
+.container.top-half {
+  min-width: 100%;
+  padding: 0;
+  margin: 0px;
+  color: white;
+  min-height: 80vh !important;
+
+  font-weight: 300;
+
+  border-radius: 0 0 10vh 10vh;
+  background-image: url("../assets/img/road-2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+
+  object-fit: cover;
+}
+.carousel-area {
+  border-radius: 10vh;
+  margin: 2vh !important;
+  background-color: #00000000;
+}
+.jumbotron.hero-area {
+  padding: 0px !important;
+  border-radius: 0 0 10vh 10vh;
+  margin: 0 !important;
+  background-color: #00000000;
+}
+
+#hero-text {
+  font-size: 4vw !important;
+  /* display: inline-block; */
+}
+#car-tab {
+  color: white !important;
+  background-color: rgba(230, 118, 5, 0.25) !important;
+  /* border-color: rgba(230, 118, 5, 0.5) !important;s */
+  font-size: 2.5vw !important;
+  /* border-radius: 0 5vw 0 5vh; */
+  width: 20vw;
+  height: 10vh;
+  padding: 10px;
+  margin: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-box-shadow: 0px 0px 52px -14px rgba(46, 25, 2, 1);
+  -moz-box-shadow: 0px 0px 52px -14px rgba(46, 25, 2, 1);
+  box-shadow: 0px 0px 52px -14px rgba(46, 25, 2, 1);
+}
+#car-tab:active,
+#car-tab:hover,
+#car-tab:focus {
+  background-color: rgba(230, 118, 5, 0.9) !important;
+
+  border: 3px solid rgba(255, 164, 148, 0.897) !important;
+}
+
+#garage-tab {
+  color: white !important;
+  background-color: rgba(5, 140, 230, 0.25) !important;
+  border-color: rgba(5, 140, 230, 0.5) !important;
+  font-size: 2.5vw !important;
+  border-radius: 2vw 2vw 0 0;
+
+  -webkit-box-shadow: 0px 0px 52px -14px rgba(2, 14, 48, 1);
+  -moz-box-shadow: 0px 0px 52px -14px rgba(2, 14, 48, 1);
+  box-shadow: 0px 0px 52px -14px rgba(2, 14, 48, 1);
+
+  width: 20vw;
+  height: 10vh;
+  padding: 10px;
+  margin: 3vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#garage-tab:active,
+#garage-tab:hover,
+#garage-tab:focus {
+  background-color: rgba(5, 140, 230, 0.9) !important;
+  border: 3px solid rgba(173, 167, 255, 0.925) !important;
+}
+.tab-content {
+  background-color: rgba(45, 167, 204, 0) !important;
+  padding: 15px 15px !important;
+  border-radius: 15px;
+
+  width: 100%;
+  height: 19vh;
+  /* clip-path: circle(10%);
+  transition: clip-path 1s; */
+}
+#car:hover {
+  background-color: rgba(5, 140, 230, 0.9) !important;
+}
+#car:hover ~ #garage-tab {
+  background-color: yellow !important;
+}
+#garage-tab:hover ~ #car {
+  background-color: yellow !important;
+}
+
+.tab-content:hover ~ #garage-tab {
+  background-color: yellow !important;
+}
+
+/* a#garage-tab.nav-link:hover {
+  clip-path: circle(100%) !important;
+} */

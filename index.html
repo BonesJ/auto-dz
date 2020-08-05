@@ -21,7 +21,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-fluid top-half">
+    <div class="container top-half">
       <nav
         class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
         id="main-nav"
@@ -75,17 +75,17 @@
             </li>
           </ul>
 
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav m-auto">
             <form class="form-inline">
-              <button class="btn btn-outline-secondary">
+              <button class="btn btn-outline-secondary ml-auto">
                 Publier Annonce
               </button>
             </form>
             <!-- Sign in link -->
-            <li class="nav-item nav-icon mr-auto">
+            <li class="nav-item nav-icon">
               <a
                 data-toggle="modal"
-                class="nav-link"
+                class="nav-link tr"
                 id="signin"
                 href="#loginModal"
               >
@@ -101,7 +101,7 @@
             <li class="nav-item nav-icon mr-auto">
               <a
                 data-toggle="modal"
-                class="nav-link"
+                class="nav-link tr"
                 id="signin"
                 href="#loginModal"
               >
@@ -115,7 +115,7 @@
             </li>
             <!-- create account link -->
             <li class="nav-item nav-icon mr-auto">
-              <a class="nav-link" id="signin" href="#">
+              <a class="nav-link tr" id="signin" href="#">
                 <svg class="bi nav-icon" fill="currentColor">
                   <use
                     xlink:href="assets/bootstrap-icons.svg#person-plus"
@@ -126,7 +126,7 @@
             </li>
             <!-- favourites link -->
             <li class="nav-item nav-icon mr-auto">
-              <a class="nav-link" id="signin" href="#">
+              <a class="nav-link tr" id="signin" href="#">
                 <svg class="bi nav-icon" fill="currentColor">
                   <use xlink:href="assets/bootstrap-icons.svg#heart"></use>
                 </svg>
@@ -138,7 +138,7 @@
       </nav>
 
       <!-- Jumbotron Hero Area -->
-      <div class="jumbotron jumbotron-fluid hero-area">
+      <div class="jumbotron hero-area">
         <div class="container">
           <h1 class="display-2 text-center" id="hero-text">
             Trouvez votre prochain
@@ -149,41 +149,41 @@
 
           <!-- Nav tabs -->
           <ul
-            class="nav nav-pills mb-4 justify-content-center"
+            class="nav nav-tab mb-4 justify-content-center"
             id="myTab"
             role="tablist"
           >
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="btn mt-4"
                 id="car-tab"
                 data-toggle="tab"
                 href="#car"
                 role="tab"
                 aria-controls="car"
                 aria-selected="true"
-                >Voitures</a
+                >Vehicule</a
               >
             </li>
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="btn mt-4"
                 id="garage-tab"
                 data-toggle="tab"
                 href="#garage"
                 role="tab"
                 aria-controls="garage"
                 aria-selected="false"
-                >Garages</a
+                >Garage</a
               >
             </li>
           </ul>
 
           <!-- Tab panes -->
-          <div>
+          <div class="tab-content">
             <!-- Car Tab -->
             <div
-              class="tab-pane"
+              class="tab-pane fade in"
               id="car"
               role="tabpanel"
               aria-labelledby="car-tab"
@@ -191,6 +191,7 @@
               <form>
                 <div class="form-row">
                   <div class="col-md">
+                    <label for="input">Marque Vehicules</label>
                     <select class="custom-select">
                       <option selected>Marque Vehicules</option>
                       <option value="1">One</option>
@@ -199,6 +200,7 @@
                     </select>
                   </div>
                   <div class="col-md">
+                    <label for="input">City</label>
                     <input
                       type="text"
                       class="form-control"
@@ -206,6 +208,7 @@
                     />
                   </div>
                   <div class="col-md">
+                    <label for="input">Wilaya</label>
                     <input
                       type="text"
                       class="form-control"
@@ -213,6 +216,7 @@
                     />
                   </div>
                   <div class="col-md">
+                    <label for="input">Zip</label>
                     <input type="text" class="form-control" placeholder="Zip" />
                   </div>
                 </div>
@@ -230,14 +234,16 @@
             </div>
             <!-- Garage Tab -->
             <div
-              class="tab-pane"
+              class="tab-pane fade"
               id="garage"
               role="tabpanel"
               aria-labelledby="garage-tab"
             >
               <form>
+                <div class="col-md"></div>
                 <div class="form-row">
                   <div class="col-md">
+                    <label for="input">Type de Garages</label>
                     <select class="custom-select">
                       <option selected>Type de Garage</option>
                       <option value="1"
@@ -250,6 +256,7 @@
                     </select>
                   </div>
                   <div class="col-md">
+                    <label for="input">Ville</label>
                     <input
                       type="text"
                       class="form-control"
@@ -257,6 +264,7 @@
                     />
                   </div>
                   <div class="col-md">
+                    <label for="input">Wilaya</label>
                     <input
                       type="text"
                       class="form-control"
@@ -264,6 +272,7 @@
                     />
                   </div>
                   <div class="col-md">
+                    <label for="input">Zip</label>
                     <input type="text" class="form-control" placeholder="Zip" />
                   </div>
                 </div>
@@ -296,38 +305,37 @@
           </div>
           <div class="modal-body">
             <div class="form-title text-center">
-              <h5>Entrez vos informations pour proceeder</h5>
+              <h5>Se Connecter</h5>
             </div>
-            <div class="d-flex flex-column text-center">
+            <div class="d-flex flex-column text-left">
               <form>
-                <label for="password" class="password mt-4"
-                  ><h6>E-mail</h6></label
+                <label for="email" class="form-label-box email mt-4 text-center"
+                  ><h6 class="form-label">Adresse E-mail</h6></label
                 >
                 <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="fa fa-at" aria-hidden="true"></i
-                  ></span>
-
                   <input
                     type="email"
                     class="form-control"
-                    id="email1"
-                    placeholder="Your email address..."
+                    id="email-login"
+                    placeholder=""
                   />
+                  <span class="input-group-text"
+                    ><i class="fa fa-at" aria-hidden="true"></i
+                  ></span>
                 </div>
-                <label for="password" class="password mt-4"
-                  ><h6>Mot de Passe</h6></label
+                <label for="password" class="form-label-box password mt-4"
+                  ><h6 class="form-label">Mot de Passe</h6></label
                 >
                 <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="fa fa-lock" aria-hidden="true"></i
-                  ></span>
                   <input
                     type="password"
                     class="form-control"
-                    id="password1"
-                    placeholder="Your password..."
+                    id="password-login"
+                    placeholder=""
                   />
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock text-center" aria-hidden="true"></i
+                  ></span>
                 </div>
                 <button
                   type="button"
@@ -396,44 +404,96 @@
           </div>
           <div class="modal-body">
             <div class="form-title text-center">
-              <h5>Vous serez bientot nembre !</h5>
+              <h5>Creer Un compte</h5>
             </div>
-            <div class="d-flex flex-column text-center">
+            <div class="d-flex flex-column text-left">
               <form>
-                <label for="password" class="password mt-4"
-                  ><h6>E-mail</h6></label
+                <!-- Full Name Field -->
+                <label for="name" class="form-label-box email mt-4 text-center"
+                  ><h6 class="form-label">Nom et Prenom</h6></label
                 >
                 <div class="input-group">
+                  <input
+                    type="name"
+                    class="form-control"
+                    id="name-signup"
+                    placeholder=""
+                  />
                   <span class="input-group-text"
-                    ><i class="fa fa-at" aria-hidden="true"></i
+                    ><i class="fa fa-user" aria-hidden="true"></i
                   ></span>
-
+                </div>
+                <!-- Tel Field -->
+                <label for="tel" class="form-label-box tel mt-4"
+                  ><h6 class="form-label">Numero de telephone</h6></label
+                >
+                <div class="input-group">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="tel-signup"
+                    placeholder=""
+                  />
+                  <span class="input-group-text"
+                    ><i class="fa fa-phone text-center" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <!-- Or Sepoerator -->
+                <label
+                  id="or-seperator"
+                  class="form-label-box email mt-4 text-center"
+                  ><h6 class="form-label text-center">Ou-bien</h6></label
+                >
+                <!-- Emmail Field -->
+                <label for="email" class="form-label-box email mt-4 text-center"
+                  ><h6 class="form-label">Adresse E-mail</h6></label
+                >
+                <div class="input-group">
                   <input
                     type="email"
                     class="form-control"
-                    id="email1"
-                    placeholder="Your email address..."
+                    id="email-signup"
+                    placeholder=""
                   />
+                  <span class="input-group-text"
+                    ><i class="fa fa-at" aria-hidden="true"></i
+                  ></span>
                 </div>
-                <label for="password" class="password mt-4"
-                  ><h6>Mot de Passe</h6></label
+                <!-- Password Field -->
+                <label for="password" class="form-label-box password mt-4"
+                  ><h6 class="form-label">Mot de Passe</h6></label
                 >
                 <div class="input-group">
-                  <span class="input-group-text"
-                    ><i class="fa fa-lock" aria-hidden="true"></i
-                  ></span>
                   <input
                     type="password"
                     class="form-control"
-                    id="password1"
-                    placeholder="Your password..."
+                    id="password-signup"
+                    placeholder=""
                   />
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock text-center" aria-hidden="true"></i
+                  ></span>
+                </div>
+                <!-- Password Confirm Field -->
+                <label for="password" class="form-label-box password mt-4"
+                  ><h6 class="form-label">Confirmer Mot de Passe</h6></label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password-signup-confirm"
+                    placeholder=""
+                  />
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock text-center" aria-hidden="true"></i
+                  ></span>
                 </div>
                 <button
                   type="button"
                   class="btn btn-outline-secondary btn-block login-btn mt-4"
                 >
-                  Se Connecter
+                  S'Enregister !
                 </button>
               </form>
 
@@ -474,7 +534,7 @@
     </div>
 
     <!-- Jumbotronb for prime listings -->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid carousel-area">
       <div class="container ad-carousel">
         <!-- Ads Caroussel -->
         <div class="container text-center my-3 ad-carousel">
