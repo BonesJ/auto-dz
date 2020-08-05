@@ -336,7 +336,7 @@ input:-webkit-autofill {
   padding: 0;
   margin: 0px;
   color: white;
-  min-height: 80vh !important;
+  /* min-height: 80vh !important; */
 
   font-weight: 300;
 
@@ -354,10 +354,19 @@ input:-webkit-autofill {
   background-color: #00000000;
 }
 .jumbotron.hero-area {
-  padding: 0px !important;
+  /* padding: 0px !important; */
   border-radius: 0 0 10vh 10vh;
-  margin: 0 !important;
-  background-color: #00000000;
+  margin: 0 30px 30px 30px !important;
+  height: 100%;
+  display: flex;
+
+  /* background-color: #00000000; */
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 0;
+  }
 }
 
 #hero-text {

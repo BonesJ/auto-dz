@@ -7,7 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <!-- Bootstrap CSS -->
     <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
     <script
@@ -21,7 +24,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container top-half">
+    <div class="container top-half" id="hero-zone">
       <nav
         class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
         id="main-nav"
@@ -139,7 +142,7 @@
 
       <!-- Jumbotron Hero Area -->
       <div class="jumbotron hero-area">
-        <div class="container">
+        <div class="container hero-container">
           <h1 class="display-2 text-center" id="hero-text">
             Trouvez votre prochain
           </h1>
@@ -180,7 +183,7 @@
           </ul>
 
           <!-- Tab panes -->
-          <div class="tab-content">
+          <div class="tab-content" id="tab-area">
             <!-- Car Tab -->
             <div
               class="tab-pane fade in"
@@ -548,7 +551,9 @@
             >
               <div class="carousel-inner w-100" role="listbox">
                 <!-- First Carousel Card -->
-                <div class="carousel-item active">
+                <div
+                  class="carousel-item active animate__animated animate__bounce"
+                >
                   <div class="col-md-4">
                     <div class="card">
                       <div class="item-card7-overlaytext">

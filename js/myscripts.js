@@ -18,42 +18,43 @@
 //   }, 5000);
 // });
 
-$(document).on("click", ".nav-link.active", function () {
-  var href = $(this).attr("href").substring(1);
-  //alert(href);
-  $(this).removeClass("active");
-  $('.tab-pane[id="' + href + '"]').removeClass("active");
-});
+// $(document).on("click", ".nav-link.active", function () {
+//   var href = $(this).attr("href").substring(1);
+//   alert("href");
+//   console.log("href");
+//   $(this).removeClass("active");
+//   $('.tab-pane[id="' + href + '"]').removeClass("active");
+// });
 $(document).mouseup(function (e) {
-  var container = $(".tab-content"); // target ID or class
+  var container = $(".hero-area"); // target ID or class
   // if the target of the click isn't the container nor a descendant of the container
   if (!container.is(e.target) && container.has(e.target).length === 0) {
     // get Event here
-    $(".active").removeClass("active");
+    $(".hero-area .active").removeClass("active");
   }
 });
 
-$("#recipeCarousel").carousel({
-  interval: 100000,
-});
+// $("#recipeCarousel").carousel({
+//   interval: 10000,
+// });
 
-$(".carousel .carousel-item").each(function () {
-  var minPerSlide = 3;
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(":first");
-  }
-  next.children(":first-child").clone().appendTo($(this));
+// $(".carousel .carousel-item").each(function () {
+//   var minPerSlide = 3;
+//   var next = $(this).next();
+//   if (!next.length) {
+//     next = $(this).siblings(":first");
+//   }
+//   next.children(":first-child").clone().appendTo($(this));
 
-  for (var i = 0; i < minPerSlide; i++) {
-    next = next.next();
-    if (!next.length) {
-      next = $(this).siblings(":first");
-    }
+//   for (var i = 0; i < minPerSlide; i++) {
+//     next = next.next();
+//     if (!next.length) {
+//       next = $(this).siblings(":first");
+//     }
 
-    next.children(":first-child").clone().appendTo($(this));
-  }
-});
+//     next.children(":first-child").clone().appendTo($(this));
+//   }
+// });
 
 // Good Code
 
